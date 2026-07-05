@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELENA CLINIC | คลินิกศัลยกรรมความงามขอนแก่น</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#C5A880', // Premium Gold
+                        dark: '#222222',
+                        light: '#FDFBF7', // Luxury Cream
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* จำลองการทำงานของเมนูมือถือ */
+        #mobile-menu {
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="#" class="text-3xl font-semibold tracking-widest text-primary">ELENA<span class="text-dark">CLINIC</span></a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-sm text-gray-700 hover:text-primary transition-colors">หน้าแรก</a>
+                <a href="#about" class="text-sm text-gray-700 hover:text-primary transition-colors">เกี่ยวกับเรา</a>
+                <a href="#services" class="text-sm text-gray-700 hover:text-primary transition-colors">บริการของเรา</a>
+                <a href="#" class="text-sm text-gray-700 hover:text-primary transition-colors">รีวิว</a>
+                <a href="#" class="text-sm text-gray-700 hover:text-primary transition-colors">คำถามที่พบบ่อย</a>
+                <a href="#" class="bg-primary text-white px-6 py-2 rounded-full text-sm hover:bg-opacity-90 transition-opacity shadow-lg">จองคิว / ติดต่อ</a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
+                <a href="#" class="block px-3 py-3 text-gray-700 hover:text-primary rounded-md">หน้าแรก</a>
+                <a href="#about" class="block px-3 py-3 text-gray-700 hover:text-primary rounded-md">เกี่ยวกับเรา</a>
+                <a href="#services" class="block px-3 py-3 text-gray-700 hover:text-primary rounded-md">บริการของเรา</a>
+                <a href="#" class="block px-3 py-3 text-gray-700 hover:text-primary rounded-md">รีวิว</a>
+                <a href="#" class="block px-3 py-3 text-gray-700 hover:text-primary rounded-md">คำถามที่พบบ่อย</a>
+                <a href="#" class="block w-full bg-primary text-white text-center px-6 py-3 rounded-md hover:bg-opacity-90 mt-4">จองคิว / ติดต่อ</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative bg-white pt-20 pb-32 lg:pt-32 lg:pb-48 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://jyounggroup.com/wp-content/uploads/2021/03/JYoungclinic-Cover-Web-002.png" alt="พรีเมียมคลินิก" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-light to-transparent"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-2xl">
+                <h4 class="text-primary font-medium tracking-widest text-sm mb-4 uppercase">Khon Kaen Cosmetic Surgery Clinic</h4>
+                <h1 class="text-4xl md:text-6xl font-light text-dark leading-tight mb-6">
+                    BE THE BEST <br>
+                    <span class="font-semibold text-primary">VERSION OF YOU</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-700 font-light mb-10 leading-relaxed">
+                    คลินิกศัลยกรรมความงามครบด้าน <br>
+                    สวยและมั่นใจในแบบที่เป็นคุณ
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="bg-primary text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition-opacity shadow-xl">สอบถาม / จองคิว</a>
+                    <a href="#services" class="border border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-white transition-all shadow-xl">ดูบริการของเรา</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow flex flex-col h-full">
+                    <div class="h-64 overflow-hidden relative aspect-[4/3]">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPEpH_QCkEph1Z4SQtLBRd0w__zrLBdGZU60JJgSs6KQ&s=10" alt="ระยะใกล้ของใบหน้าที่สวยงาม" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-white/80 px-3 py-1 text-xs text-primary rounded-sm tracking-wider uppercase">01 SERVICE</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-medium text-dark mb-3">ศัลยกรรมใบหน้า</h3>
+                        <p class="text-sm text-gray-700 font-light mb-6 flex-grow">ออกแบบรูปหน้าอย่างละเอียด ให้ผลลัพธ์ดูละมุนและเหมาะกับแต่ละบุคคล</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6 font-light">
+                            <li>• ปากกระจับ</li>
+                            <li>• เสริมจมูก / เสริมคาง</li>
+                            <li>• ตาสองชั้น</li>
+                            <li>• ดึงหน้า Full Face Lift</li>
+                        </ul>
+                        <a href="#" class="text-primary text-sm font-medium hover:text-primaryDark transition-colors inline-flex items-center">
+                            ดูทั้งหมด <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow flex flex-col h-full">
+                    <div class="h-64 overflow-hidden relative aspect-[4/3]">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqaRrDLvHOdoyCTUQHVL2s9DMqssvwnbcZj0E1DhX5IA&s=10" alt="ระยะใกล้ของรูปร่าง/สัดส่วนที่สวยงามและละเอียดอ่อน" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-white/80 px-3 py-1 text-xs text-primary rounded-sm tracking-wider uppercase">02 SERVICE</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-medium text-dark mb-3">ศัลยกรรมรูปร่าง</h3>
+                        <p class="text-sm text-gray-700 font-light mb-6 flex-grow">ปรับสัดส่วนและรูปร่างด้วยแผนการดูแลที่เหมาะกับเป้าหมายของแต่ละคน</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6 font-light">
+                            <li>• เสริมหน้าอก / ยกกระชับหน้าอก</li>
+                            <li>• ดูดไขมัน / ดึงหน้าท้อง</li>
+                            <li>• เสริมสะโพก</li>
+                            <li>• รีแพร์ / ตกแต่งแคม</li>
+                        </ul>
+                        <a href="#" class="text-primary text-sm font-medium hover:text-primaryDark transition-colors inline-flex items-center">
+                            ดูทั้งหมด <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow flex flex-col h-full">
+                    <div class="h-64 overflow-hidden relative aspect-[4/3]">
+                        <img src="https://images-1.eucerin.com/~/media/eucerin/local/th/2023/june/content%2015/skin.jpg" alt="ใบหน้าที่สวยงามพร้อมลิปสติกสีแดง" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-white/80 px-3 py-1 text-xs text-primary rounded-sm tracking-wider uppercase">03 SERVICE</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-medium text-dark mb-3">ผิวพรรณความงาม</h3>
+                        <p class="text-sm text-gray-700 font-light mb-6 flex-grow">ดูแลผิว ความสดใส และความอ่อนเยาว์ด้วยโปรแกรมความงามเฉพาะบุคคล</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6 font-light">
+                            <li>• ความงามผิวพรรณ</li>
+                            <li>• โปรแกรมโบท็อกซ์</li>
+                            <li>• โปรแกรมฟิลเลอร์</li>
+                            <li>• ศาสตร์แห่งการชะลอวัย</li>
+                        </ul>
+                        <a href="#" class="text-primary text-sm font-medium hover:text-primaryDark transition-colors inline-flex items-center">
+                            ดูทั้งหมด <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row-reverse items-center gap-16">
+            <div class="w-full md:w-1/2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4gSIqTdNZZ6XDXoU8GDdtbmCRObp2u_zVEvg-E8yb1BVkLrd36uDpfec&s=10" alt="มือแพทย์ที่ดูแลคนไข้" class="rounded-xl shadow-lg w-full">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h4 class="text-primary font-medium tracking-widest text-sm mb-2 uppercase">ABOUT US</h4>
+                <h2 class="text-3xl md:text-4xl font-semibold text-dark mb-8">ก่อนจะมาเป็น “เอเลน่า คลินิก”</h2>
+                
+                <p class="text-sm text-gray-700 font-light mb-4 leading-relaxed">
+                    เดิมเราคือ “เอมิลี่คลินิก (Emily Clinic)” ซึ่งเปิดมาตั้งแต่ปี พ.ศ.2562 และมีการบอกกันอย่างปากต่อปากถึงคุณภาพที่ดี มีการบริการดี ความเอาใจใส่ของพนักงานและหมอผู้ทำการผ่าตัดทำให้มีลูกค้าเข้ามาใช้บริการอย่างเนืองแน่น
+                </p>
+                
+                <p class="text-sm text-gray-700 font-light leading-relaxed mb-12">
+                    จนในปีพ.ศ. 2566 เราได้มีการขยายทีม ขยายพื้นที่คลินิกให้เพียงพอและอำนวยความสะดวกให้แก่ลูกค้าที่มาใช้บริการมากที่สุด และเปิดบริการด้านศัลยกรรมครบวงจร
+                </p>
+
+                <div class="bg-light p-6 rounded-lg border-l-4 border-primary shadow-inner">
+                    <h4 class="text-sm font-medium text-dark mb-3">ดูแลโดยทีมแพทย์ผู้เชี่ยวชาญ</h4>
+                    <ul class="text-sm text-gray-700 space-y-1 font-light list-inside list-disc">
+                        <li>นพ.โอภาส คุ้มกองสุวรรณ (หมอโอ) - International Board of Cosmetic Surgery</li>
+                        <li>พญ.เอมอัชนา แก้วใสย์ (หมอเอม)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-semibold tracking-widest text-primary mb-6">ELENA<span class="text-white">CLINIC</span></h3>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        คลินิกศัลยกรรมความงามครบด้าน <br>
+                        “BE THE BEST VERSION OF YOU” <br>
+                        สวยและมั่นใจในแบบที่เป็นคุณ
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium mb-6">ลิงก์ด่วน</h4>
+                    <ul class="space-y-3 text-sm text-gray-400 font-light">
+                        <li><a href="#" class="hover:text-primary transition-colors">หน้าแรก</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">เกี่ยวกับเรา</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">บริการของเรา</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">รีวิว</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium mb-6">ติดต่อเรา</h4>
+                    <p class="text-sm text-gray-400 font-light mb-4">คลินิกศัลยกรรมขอนแก่น</p>
+                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full text-sm hover:bg-opacity-90 transition-opacity shadow-lg">สอบถามผ่าน Line</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500 font-light">
+                &copy; 2026 Elena Clinic. All Rights Reserved. (Demo concept)
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
